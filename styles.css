@@ -1,0 +1,189 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Выровнять содержимое по левому краю */
+    padding: 10px 20px;
+}
+
+header img {
+    width: 100%;  /* Изображение адаптируется по ширине контейнера */
+    max-width: 50px; /* Максимальная ширина изображения */
+    height: auto; /* Поддерживает пропорциональность */
+    margin-right: 10px;
+}
+
+/* Стили для кнопки "Назад" */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Зелёный цвет кнопки */
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убирает подчёркивание */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+header h1 {
+    display: inline;
+    font-size: 24px;
+}
+
+/* Контейнер для main и sidebar */
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+/* Основная часть */
+main {
+    flex: 3;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 400px;
+}
+
+/* Боковая панель навигации */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #ddd;
+    margin-left: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    color: #555;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* --- Адаптация для мобильных устройств --- */
+@media (max-width: 768px) {
+    /* Переключаемся на вертикальную колонку */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Убираем отступ на боковой панели для мобильных */
+    .sidebar {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Уменьшаем размер заголовка */
+    header h1 {
+        font-size: 20px;
+    }
+
+    /* Центрируем текст и изображения в заголовке */
+    header img {
+        display: block;
+        margin: 0 auto 10px;
+        max-width: 100%; /* Подстраиваем ширину изображения */
+    }
+
+    header h1 {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Уменьшаем отступы для более компактного вида на маленьких экранах */
+    header, footer {
+        padding: 10px;
+    }
+
+    main, .sidebar {
+        padding: 10px;
+    }
+
+    /* Уменьшаем размер текста в футере */
+    footer p {
+        font-size: 12px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Стили для иконок социальных сетей */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ddd; /* Цвет при наведении */
+}
